@@ -4,11 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var userRegistrationService: UserRegistrationService
+   private lateinit var userRegistrationComponanet: UserRegistrationComponanet
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        userRegistrationService= UserRegistrationService()
-        userRegistrationService.registerUser("codingsick@gmail.com","123345")
+        //userRegistrationComponanet refernce
+        userRegistrationComponanet=DaggerUserRegistrationComponanet.builder().build()
+
+        userRegistrationComponanet.getUserRegitrationService()
+            .registerUser("codingsick@gmail.com","1234567")
+
     }
 }
