@@ -4,5 +4,11 @@ import dagger.Component
 
 @Component
 interface UserRegistrationComponanet {
-    fun getUserRegitrationService():UserRegistrationService
+
+
+
+    fun injectTheField(mainActivity: MainActivity)
+
+
+
 }
