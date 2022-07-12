@@ -1,10 +1,11 @@
 package com.example.degger2_kotlin
 
 import javax.inject.Inject
+import javax.inject.Named
 
 class UserRegistrationService @Inject constructor(
-   private val notificationService: Notification_Service,
-    private val userRepository: User_Repository
+    @Named("message")  private val notificationService: Notification_Service,
+   private val userRepository: User_Repository
 )
 {
 
