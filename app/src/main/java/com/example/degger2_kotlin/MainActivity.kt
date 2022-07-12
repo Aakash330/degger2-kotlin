@@ -2,6 +2,7 @@ package com.example.degger2_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.degger2_kotlin.module.NotificationServiceModule
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,11 @@ private lateinit var userRegistrationComponanet: UserRegistrationComponanet
         setContentView(R.layout.activity_main)
         //userRegistrationComponanet refernce
 
-        userRegistrationComponanet=DaggerUserRegistrationComponanet.builder().build()
+
+        //here is network module created and value is passed here
+        userRegistrationComponanet=DaggerUserRegistrationComponanet.builder()
+            .notificationServiceModule(NotificationServiceModule(4))
+            .build()
 
         userRegistrationComponanet.injectTheField(this)
 

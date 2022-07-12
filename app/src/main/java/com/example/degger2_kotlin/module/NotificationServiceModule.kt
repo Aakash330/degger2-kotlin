@@ -9,14 +9,18 @@ import dagger.Provides
 import javax.inject.Named
 
 @Module
-class NotificationServiceModule {
+class NotificationServiceModule(private val retry:Int) {
 
     //this own Qualifier to avoid the conflict
     @MessageQualifier
     @Provides
     fun getMessageService() :Notification_Service
     {
-        return Message_Service()
+        /*here method is changed because it will take one argument as int type
+        then we have to create NotificationServiceModule where u initializing the Dagger
+        in my case i have to initialize the dagger in MainActivity
+        */
+        return Message_Service(retry)
     }
 
     @Named("email")
