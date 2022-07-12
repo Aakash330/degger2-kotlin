@@ -14,10 +14,18 @@ private lateinit var userRegistrationComponanet: UserRegistrationComponanet
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //userRegistrationComponanet refernce
+
         userRegistrationComponanet=DaggerUserRegistrationComponanet.builder().build()
+
         userRegistrationComponanet.injectTheField(this)
 
-        userRegistrationService.registerUser("codingsick@gamil.com","1234567")
+
+        userRegistrationService.registerUser("codingsick@gmail.com","112333")
+
+
+
+
+
 
 
 

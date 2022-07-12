@@ -2,15 +2,16 @@ package com.example.degger2_kotlin
 
 import javax.inject.Inject
 
-class UserRegistrationService @Inject constructor(private val emailService: Email_service,
-                                                      private val userRepository: User_Repository
+class UserRegistrationService @Inject constructor(
+   private val notificationService: Notification_Service,
+    private val userRepository: User_Repository
 )
 {
 
     fun registerUser(email:String,password:String)
     {
         userRepository.savePassword(email,password)
-        emailService.send(email,"noreplyCodingsick@gmail.com",password)
+        notificationService.send(email,"noreplyCodingsick@gmail.com",password)
     }
 
 }
