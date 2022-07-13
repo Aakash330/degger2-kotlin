@@ -19,6 +19,8 @@ rotate then new instance created of email service
 #in this branch to commit is done first for Activity wise Singleton
  second commit is Application wise Singleton.
 
+ #Aplication wise Singleton we have added one Singleton class
+
 
 
 
