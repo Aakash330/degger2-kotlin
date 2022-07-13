@@ -6,3 +6,19 @@ from factory.component branch
   now it is taking one parameter .in previous branch i was not taking
 
 #in MainActivity to  creating UserRegistrationComponanet() it has changed now we are passing the data at run time
+
+***change from singleton branch**
+
+# in MainActivity two email service instance create where both are singleton
+which is singleton by Activity not by whole application tha means when Activity
+rotate then new instance created of email service
+
+#in Email_Service class we have put @Singleton notation to crate singleton object
+#in Component interface @Singleton notation we have put to crate singleton object
+
+#in this branch to commit is done first for Activity wise Singleton
+ second commit is Application wise Singleton.
+
+
+
+

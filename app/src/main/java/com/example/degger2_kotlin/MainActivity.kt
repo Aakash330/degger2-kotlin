@@ -10,13 +10,11 @@ private lateinit var userRegistrationComponanet: UserRegistrationComponanet
 @Inject lateinit var userRegistrationService:UserRegistrationService
 
 @Inject lateinit var emailService: Email_service
-
+@Inject lateinit var emailService2: Email_service  //both email service singleton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         //userRegistrationComponanet refernce
-
-
         //here is network module created and value is passed here
         userRegistrationComponanet=DaggerUserRegistrationComponanet.factory().create(7)
             //DaggerUserRegistrationComponanet.

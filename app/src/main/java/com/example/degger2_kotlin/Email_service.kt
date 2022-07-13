@@ -2,11 +2,13 @@ package com.example.degger2_kotlin
 
 import android.util.Log
 import javax.inject.Inject
+import javax.inject.Singleton
 
 interface Notification_Service
 {
     fun send(to:String,from:String,body:String)
 }
+@Singleton
 class Email_service @Inject constructor() :Notification_Service {
     private  val TAG = "Email_service"
    override fun send(to:String,from:String,body:String)
