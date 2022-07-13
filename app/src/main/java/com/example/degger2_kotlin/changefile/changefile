@@ -22,5 +22,12 @@ rotate then new instance created of email service
  #Aplication wise Singleton we have added one Singleton class
 
 
+ **change from analyticservice branch**
+ #one packege is added Analytics
+ #User_Repository Construtor change
+ #in Components one module added AnalyticModule
+
+
+
 
 
