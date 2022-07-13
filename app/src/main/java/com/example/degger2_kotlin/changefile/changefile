@@ -1,0 +1,8 @@
+from factory.component branch
+# in UserRegistrationComponanet  interface one another interface added from factory.component branch
+# in NotificationServiceModule() parameter is removed because now we are passing value at runtime by dagger
+ When we will create UserRegistrationComponanet object
+# fun getMessageService(retry:Int) :Notification_Service is changed from NotificationServiceModule class
+  now it is taking one parameter .in previous branch i was not taking
+
+#in MainActivity to  creating UserRegistrationComponanet() it has changed now we are passing the data at run time

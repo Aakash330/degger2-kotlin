@@ -18,20 +18,10 @@ private lateinit var userRegistrationComponanet: UserRegistrationComponanet
 
 
         //here is network module created and value is passed here
-        userRegistrationComponanet=DaggerUserRegistrationComponanet.builder()
-            .notificationServiceModule(NotificationServiceModule(4))
-            .build()
-
+        userRegistrationComponanet=DaggerUserRegistrationComponanet.factory().create(7)
+            //DaggerUserRegistrationComponanet.
         userRegistrationComponanet.injectTheField(this)
-
-
         userRegistrationService.registerUser("codingsick@gmail.com","112333")
-
-
-
-
-
-
 
 
 

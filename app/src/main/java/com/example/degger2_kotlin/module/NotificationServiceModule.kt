@@ -9,12 +9,13 @@ import dagger.Provides
 import javax.inject.Named
 
 @Module
-class NotificationServiceModule(private val retry:Int) {
+class NotificationServiceModule() {
 
     //this own Qualifier to avoid the conflict
+    //getMessageService parameter changed
     @MessageQualifier
     @Provides
-    fun getMessageService() :Notification_Service
+    fun getMessageService(retry:Int) :Notification_Service
     {
         /*here method is changed because it will take one argument as int type
         then we have to create NotificationServiceModule where u initializing the Dagger
